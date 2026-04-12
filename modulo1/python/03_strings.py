@@ -9,7 +9,7 @@ print("Hola", "Desde", "La", "UTE", end="|")
 nombre = "Maria Ramos"
 edad = 29
 print(nombre, edad, end= "|")
-nombre_edad=f "Nombre: {nombre},  Edad: {edad}"
+nombre_edad = f"Nombre: {nombre},  Edad: {edad}"
 print(nombre_edad)
 print(f"Nombre: {nombre}, {edad}")
 print(f"Doble de {edad}es{edad*2}")
