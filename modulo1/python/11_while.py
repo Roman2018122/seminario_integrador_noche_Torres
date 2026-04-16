@@ -22,3 +22,5 @@ if total >= 100:
     print("aplica descuento")
 else:
     print("no aplica descuento")
+    
+    "twm"
