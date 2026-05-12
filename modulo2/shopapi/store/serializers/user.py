@@ -30,18 +30,18 @@ class RegisterSerializer(serializers.Serializer):
 
 
 class UserSerializer(serializers.ModelSerializer):
-    """
-    Vista completa del usuario para staff.
-    El campo num_orders se incorpora en la Etapa 5
-    una vez que el modelo Order esté disponible.
-    """
+    num_orders = serializers.SerializerMethodField()
+   
     class Meta:
         model  = User
         fields = [
             'id', 'username', 'email', 'first_name', 'last_name',
-            'is_staff', 'is_active', 'date_joined',
+            'is_staff', 'is_active', 'date_joined', 'num_orders'
         ]
         read_only_fields = ['id', 'date_joined']
+        
+    def get_num_orders(self, obj):
+        return obj.orders.count()
 
 
 class UserProfileSerializer(serializers.ModelSerializer):
