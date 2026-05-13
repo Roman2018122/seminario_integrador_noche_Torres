@@ -93,3 +93,6 @@ class RefreshLogoutTests(TestCase):
         self.client.credentials(HTTP_AUTHORIZATION=f'Bearer {self.access}')
         resp = self.client.post('/api/auth/logout/', {})
         self.assertEqual(resp.status_code, status.HTTP_400_BAD_REQUEST)
+
+
+## 
