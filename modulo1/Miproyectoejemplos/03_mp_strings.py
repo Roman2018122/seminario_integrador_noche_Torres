@@ -1,3 +1,7 @@
+
+
+
+
 repuestos = "Frenos", "Discos", "Pastillas", "ABS"
 print(repuestos)
 

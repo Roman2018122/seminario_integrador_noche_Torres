@@ -1,10 +1,51 @@
-print("Operadores de comparacion")
+print("Operadores de comparación en Taller Mecánico")
 
-numero1=float(input("Primer Numero:"))
-numero2=float(input("Segundo Numero:"))
-print(numero1, "==", numero2,numero1 ==numero2)
-print(numero1, "!=", numero2,numero1 !=numero2)
-print(numero1, ">", numero2,numero1 > numero2)
-print(numero1, "<", numero2,numero1 < numero2)
-print(numero1, ">=", numero2,numero1 >= numero2)
-print(numero1, "<=", numero2,numero1 <=numero2)
+costo_reparacion = float(
+    input("Ingrese el costo de la reparación: ")
+)
+
+costo_repuestos = float(
+    input("Ingrese el costo de los repuestos: ")
+)
+
+print(
+    costo_reparacion,
+    "==",
+    costo_repuestos,
+    costo_reparacion == costo_repuestos
+)
+
+print(
+    costo_reparacion,
+    "!=",
+    costo_repuestos,
+    costo_reparacion != costo_repuestos
+)
+
+print(
+    costo_reparacion,
+    ">",
+    costo_repuestos,
+    costo_reparacion > costo_repuestos
+)
+
+print(
+    costo_reparacion,
+    "<",
+    costo_repuestos,
+    costo_reparacion < costo_repuestos
+)
+
+print(
+    costo_reparacion,
+    ">=",
+    costo_repuestos,
+    costo_reparacion >= costo_repuestos
+)
+
+print(
+    costo_reparacion,
+    "<=",
+    costo_repuestos,
+    costo_reparacion <= costo_repuestos
+)

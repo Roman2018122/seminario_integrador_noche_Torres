@@ -1,10 +1,39 @@
-precio1 = 10
-precio2 = 3
+# Operadores aritméticos en un taller mecánico
 
-print("Suma:", precio1 + precio2)          # 13
-print("Resta:", precio1 - precio2)         # 7
-print("Multiplicación:", precio1 * precio2) # 30
-print("División:", precio1 / precio2)      # 3.333...
-print("División entera:", precio1 // precio2) # 3
-print("Módulo:", precio1 % precio2)        # 1 (residuo)
-print("Potencia:", precio1 ** precio2)     # 1000
+costo_reparacion = 10
+cantidad_repuestos = 3
+
+print(
+    "Costo total:",
+    costo_reparacion + cantidad_repuestos
+)  # 13
+
+print(
+    "Diferencia de costos:",
+    costo_reparacion - cantidad_repuestos
+)  # 7
+
+print(
+    "Costo multiplicado:",
+    costo_reparacion * cantidad_repuestos
+)  # 30
+
+print(
+    "Costo dividido:",
+    costo_reparacion / cantidad_repuestos
+)  # 3.333...
+
+print(
+    "División entera:",
+    costo_reparacion // cantidad_repuestos
+)  # 3
+
+print(
+    "Residuo del cálculo:",
+    costo_reparacion % cantidad_repuestos
+)  # 1
+
+print(
+    "Potencia del costo:",
+    costo_reparacion ** cantidad_repuestos
+)  # 1000

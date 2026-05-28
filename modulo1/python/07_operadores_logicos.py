@@ -1,4 +1,4 @@
-print("Operadores de comparacion")
+print("Operadores de logicos")
 
 es_mayor = True
 tiene_permiso=False

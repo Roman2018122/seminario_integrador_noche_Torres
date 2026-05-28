@@ -1,23 +1,47 @@
-print("match - case")
-comando= input("comando iniciar/parar/reiniciar")
-match comando:
-    case "iniciar":
-        print("Sistema iniciando...")
-    case "parar":
-        print("Sistema deteniendose...")
-    case "reiniciar":
-        print("sistema reiniciando...")
+print("Match - Case en un Taller Mecánico")
+
+servicio = input(
+    "Ingrese servicio "
+    "(revision/reparacion/lavado): "
+)
+
+match servicio:
+
+    case "revision":
+        print("Vehículo ingresado a revisión")
+
+    case "reparacion":
+        print("Vehículo enviado al área de reparación")
+
+    case "lavado":
+        print("Vehículo enviado al área de lavado")
+
     case _:
-        print(f"comando {comando} no valido")
-        
-print("match - con condiciones")
-numero = int(input("incluya numero"))
-match numero:
-    case n if n<0:
-        print(f"{n}es negativo")
+        print(f"Servicio {servicio} no válido")
+
+
+print("Match - Case con condiciones")
+
+kilometraje = int(
+    input("Ingrese kilometraje del vehículo: ")
+)
+
+match kilometraje:
+
+    case km if km < 0:
+        print(f"{km} es un kilometraje inválido")
+
     case 0:
-        print("Es cero")
-    case n if n %2 == 0:
-        print(f"el numero{n} es positivo y par ")
-    case n:
-        print(f"el numero {n} es positivo y par")
+        print("Vehículo nuevo")
+
+    case km if km % 2 == 0:
+        print(
+            f"El vehículo tiene "
+            f"{km} km y el número es par"
+        )
+
+    case km:
+        print(
+            f"El vehículo tiene "
+            f"{km} km y el número es impar"
+        )

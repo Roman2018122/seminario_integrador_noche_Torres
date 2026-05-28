@@ -1,26 +1,51 @@
-print("ciclo while")
-contador = 1
-while contador <= 5:
-    print(contador)
-    contador+= 1
+print("Ciclo WHILE en un Taller Mecánico")
 
+# Contador de vehículos atendidos
+contador = 1
+
+while contador <= 5:
+
+    print(f"Vehículo atendido #{contador}")
+
+    contador += 1
+
+
+# Registro de servicios
 dato = ""
+
 while dato != "salir":
-    dato = input("escribe algo (salir para terminar)")
-    print("escribiste: ", dato)
-    
-    
-cantidad = int(input("Cuantos productos compro"))
-total= 0
-contador = 0
+
+    dato = input(
+        "Ingrese un servicio "
+        "(salir para terminar): "
+    )
+
+    print("Servicio registrado:", dato)
+
+
+# Cálculo de costos
+cantidad = int(
+    input("¿Cuántos repuestos compró el cliente?: ")
+)
+
+total = 0
+contador = 1
+
 while contador <= cantidad:
-    precio = float(input(f"precio del producto{contador}"))
-    total+=precio
-    contador+=1
-print("total", total )
+
+    precio = float(
+        input(
+            f"Precio del repuesto {contador}: "
+        )
+    )
+
+    total += precio
+
+    contador += 1
+
+print("Total a pagar:", total)
+
 if total >= 100:
-    print("aplica descuento")
+    print("Aplica descuento")
 else:
-    print("no aplica descuento")
-    
-    
+    print("No aplica descuento")

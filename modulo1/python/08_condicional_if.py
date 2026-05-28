@@ -1,46 +1,65 @@
-print("condicional if")
-print("if simple")
-stock=3
-if stock >0:
-    print("Producto disponible")
-    print("if else - dos caminos")
-    saldo=25
-    if saldo >=50:
-        print("compra permitida")
+print("Condicionales en un Taller Mecánico")
+
+print("If simple")
+
+repuestos_disponibles = 3
+
+if repuestos_disponibles > 0:
+    print("Repuestos disponibles en el taller")
+
+    print("If else - dos caminos")
+
+    presupuesto_cliente = 25
+
+    if presupuesto_cliente >= 50:
+        print("Reparación autorizada")
     else:
-        print("saldo insuficiente")
-    print("if multiples condiciones")
-    temperatura=32
-    if temperatura <10:
-        print("hace frio")
-    elif temperatura<25:
-        print("clima templado")
-        
+        print("Presupuesto insuficiente para la reparación")
+
+    print("If múltiples condiciones")
+
+    temperatura_motor = 32
+
+    if temperatura_motor < 10:
+        print("Motor demasiado frío")
+
+    elif temperatura_motor < 25:
+        print("Motor en temperatura estable")
+
     else:
-        print("hace calor")
-        
-    print("if condiciones anidadas")
-    conexion= True
-    token_valido=False
-    if conexion:
-        if token_valido:
-            print("acceso a la api")
-        else: 
-            print("token invalido")
+        print("Motor caliente")
+
+    print("If con condiciones anidadas")
+
+    conexion_scanner = True
+    scanner_autorizado = False
+
+    if conexion_scanner:
+
+        if scanner_autorizado:
+            print("Acceso al sistema de diagnóstico")
+
+        else:
+            print("Scanner no autorizado")
+
     else:
-        print("sin conexion")
-        
-        
-    print("if con operadores logicos")
-    documento= True
-    pago = True
-    if documento and pago:
-        print("inscripcion confirmada")
-    es_vip= False
-    tiene_invitacion= True
-    if es_vip or tiene_invitacion:
-        print("Puede entrar al evento")
-        
-    bloqueado= False
-    if not bloqueado:
-        print("Usuario habilitado")
+        print("Sin conexión al sistema")
+
+    print("If con operadores lógicos")
+
+    pago_realizado = True
+    repuesto_instalado = True
+
+    if pago_realizado and repuesto_instalado:
+        print("Entrega del vehículo confirmada")
+
+    cliente_vip = False
+    tiene_cupon = True
+
+    if cliente_vip or tiene_cupon:
+        print("Cliente con descuento especial")
+
+    vehiculo_bloqueado = False
+
+    if not vehiculo_bloqueado:
+        print("Vehículo habilitado para salir del taller")

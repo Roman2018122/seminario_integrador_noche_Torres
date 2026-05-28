@@ -1,47 +1,128 @@
-print("funciones en python")
-print("funcion basica")
-def saludar():
-    print("Hola desde taller mecanico")
-    
-saludar()
-print("funcion con parametro")
-def saludarConNombre(nombre):
-    print(f"Hola: {nombre}, que tal?")
-    
-saludarConNombre("Roman")
+print("Funciones en Python - Sistema de Taller Mecánico")
+
+print("Función básica")
+
+def iniciar_taller():
+    print("El taller mecánico está abierto")
+
+iniciar_taller()
 
 
-print("funcion que devuelve valor con return")
-def sumar(a, b):
-    return a + b
-print (sumar(5,4))
+print("Función con parámetro")
 
-print("funcion por posicion y por nombre")
-def presentar(nombre, edad, ciudad):
-    print(f"señor(a): {nombre}, edad: {edad}, ciudad: {ciudad}")
-presentar("Roman", 23, "Quito")
-presentar(ciudad=40, edad= 55, nombre="pedro")
+def recibir_cliente(nombre):
+    print(
+        f"Bienvenido {nombre}, "
+        f"su vehículo será diagnosticado"
+    )
+
+recibir_cliente("Roman")
 
 
-print("funcion con valores de parametros por defecto")
-def saludo_con_valores(nombre, saludo= "Hola", puntuacion="!"):
-    presentar(saludo,  nombre, puntuacion)
-saludo_con_valores("pedro",  "buenas noches", "...")
-saludo_con_valores("juan", puntuacion="...")
-saludo_con_valores("carlos", "Buenas tardes")
+print("Función que devuelve valor con return")
 
-print("funcion con parametros posicionales")
-def sumar_todos(*args):
-    print(f"parametros recibidos {args}")
+def calcular_factura(
+    mano_obra,
+    repuestos
+):
+    return mano_obra + repuestos
+
+print(calcular_factura(120, 80))
+
+
+print("Función por posición y por nombre")
+
+def registrar_vehiculo(
+    cliente,
+    vehiculo,
+    placa
+):
+    print(
+        f"Cliente: {cliente}, "
+        f"Vehículo: {vehiculo}, "
+        f"Placa: {placa}"
+    )
+
+registrar_vehiculo(
+    "Roman",
+    "Toyota Corolla",
+    "ABC-123"
+)
+
+registrar_vehiculo(
+    placa="XYZ-999",
+    vehiculo="Chevrolet Spark",
+    cliente="Pedro"
+)
+
+
+print("Función con valores por defecto")
+
+def mensaje_revision(
+    cliente,
+    saludo="Hola",
+    estado="Vehículo en revisión"
+):
+    print(f"{saludo} {cliente} - {estado}")
+
+mensaje_revision(
+    "Carlos",
+    "Buenas tardes",
+    "Vehículo listo"
+)
+
+mensaje_revision(
+    "Juan",
+    estado="Pendiente de repuestos"
+)
+
+mensaje_revision(
+    "Ana",
+    "Buenos días"
+)
+
+
+print("Función con parámetros posicionales")
+
+def sumar_costos(*args):
+
+    print(f"Costos recibidos: {args}")
+
     return sum(args)
-print(sumar_todos(1,2,3))
-print(sumar_todos(1,2,3,4,5,6,7))
-print(sumar_todos(10,20,30))
 
-print("funcion con parametros combinados con posicionales")
-def mostrar_info(titulo, *datos):
-    print(f"parametros recibidos {datos}, {titulo}")
+print(sumar_costos(50, 60, 70))
+
+print(sumar_costos(
+    100, 200, 300, 400
+))
+
+print(sumar_costos(25, 35))
+
+
+print(
+    "Función con parámetros combinados "
+    "y posicionales"
+)
+
+def mostrar_reparaciones(
+    titulo,
+    *datos
+):
+
+    print(
+        f"Reparaciones registradas: "
+        f"{datos}, {titulo}"
+    )
+
     print(titulo)
+
     for dato in datos:
-        print(f"-{dato}")
-mostrar_info("carros", "subvs", "camionetas", "sedanes")
+        print(f"- {dato}")
+
+mostrar_reparaciones(
+    "Servicios realizados",
+    "Cambio de aceite",
+    "Alineación",
+    "Balanceo",
+    "Cambio de frenos"
+)

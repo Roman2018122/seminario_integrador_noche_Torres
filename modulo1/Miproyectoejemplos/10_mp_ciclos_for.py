@@ -1,58 +1,92 @@
-print("Ciclo for")
-print("for basico")
+print("Ciclo FOR en un Taller Mecánico")
 
-for i in range(1,6):
-    print(i)
+print("For básico")
 
-autos=["camionetas","deportivas","sedanes"]
-for auto in autos:
+for i in range(1, 6):
+    print(f"Vehículo atendido #{i}")
+
+tipos_autos = [
+    "Camionetas",
+    "Deportivos",
+    "Sedanes"
+]
+
+for auto in tipos_autos:
     print(auto)
 
 
-print("control de interrupción")
-for i in range(1,10):
-    if i==3: continue
-    if i==7: break
-    print(i)
+print("Control de interrupción")
+
+for i in range(1, 10):
+
+    if i == 3:continue
+    if i == 7:break
+
+    print(f"Repuesto revisado #{i}")
+
 else:
     print("Terminado el ciclo")
 
-print("for con range step")
-for i in range(0,10,2):
-    print(i)
+
+print("For con range step")
+
+for i in range(0, 10, 2):
+    print(f"Bahía del taller #{i}")
 
 
-print("for con range regresivo")
-for i in range(10,0,-1):
-    print(i)
+print("For con range regresivo")
+
+for i in range(10, 0, -1):
+    print(f"Turno restante: {i}")
 
 
-print("for con enumerate")
-marcas=["bmw","audi","mazda","mercedes"]
+print("For con enumerate")
+
+marcas = ["Toyota","Mazda","Chevrolet","BMW"
+]
+
 for indice, nombre in enumerate(marcas):
     print(indice, nombre)
 
 
-print("for con zip")
-edades=[18,11,25,56]
-for marca, edad in zip(marcas, edades):
-    print(marca, edad)
-    
-    
-print("for anidados ")
-for i in range (1,4):
-    for x in range (1,4):
-        print(i,x)
-        
-            
-cantidad =  int(input("ingrese cantidad de repuestos "))
+print("For con zip")
+
+años = [2018, 2020, 2021, 2024]
+
+for marca, año in zip(marcas, años):
+    print(marca, año)
+
+
+print("For anidados")
+
+for i in range(1, 4):
+
+    for x in range(1, 4):
+        print(
+            f"Bahía {i} - "
+            f"Mecánico {x}"
+        )
+
+
+cantidad = int(
+    input("Ingrese cantidad de repuestos: ")
+)
+
 suma = 0
-for i in range (1, cantidad +1):
-    repuesto = float(input(f"repuesto {i}:"))
-    suma+= repuesto
-promedio= suma/cantidad
-print("costo promedio: ", promedio)
-if promedio >=7:
-    print("descento del 10%")
-else: 
-    print("no hay descuento")
+
+for i in range(1, cantidad + 1):
+
+    repuesto = float(
+        input(f"Costo del repuesto {i}: ")
+    )
+
+    suma += repuesto
+
+promedio = suma / cantidad
+
+print("Costo promedio:", promedio)
+
+if promedio >= 7:
+    print("Descuento del 10%")
+else:
+    print("No hay descuento")
