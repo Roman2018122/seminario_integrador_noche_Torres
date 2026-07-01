@@ -1,22 +1,22 @@
 class Temperatura {
-  valorCelsius: number;
+  valorFarenheit: number;
 
   constructor(celsius: number) {
-    this.valorCelsius = celsius;
+    this.valorFarenheit = celsius;
   }
 
   aFahrenheit(): number {
-    return this.valorCelsius * 9 / 5 + 32;
+    return this.valorFarenheit *(28 - 32 ) * 5 / 9;
   }
 
   aKelvin(): number {
-    return this.valorCelsius + 273.15;
+    return this.valorFarenheit + 273.15;
   }
 
   describir(): string {
     return (
-      `${this.valorCelsius}°C = ` +
-      `${this.aFahrenheit()}°F = ` +
+      `${this.valorFarenheit}°C = ` +
+      `${this.acelsius()}°F = ` +
       `${this.aKelvin()}K`
     );
   }
