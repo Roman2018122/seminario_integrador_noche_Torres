@@ -1,0 +1,46 @@
+// bucle-while.ts
+
+// While básico
+let vehiculosPendientes: number = 1;
+
+while (vehiculosPendientes <= 5) {
+  console.log(`Vehículo ${vehiculosPendientes} ingresó al taller`);
+  vehiculosPendientes++;
+}
+
+// do...while — se ejecuta al menos una vez
+let kilometrajeRestante: number = 10000;
+
+do {
+  console.log(`Kilometraje restante para el mantenimiento: ${kilometrajeRestante} km`);
+  kilometrajeRestante -= 3000;
+} while (kilometrajeRestante > 0);
+
+// Mientras con TypeScript — buscar una placa
+function buscarPlaca(): void {
+  const placaBuscada: string = "ABC-1234";
+
+  const placas: string[] = [
+    "XYZ-9876",
+    "DEF-5678",
+    "LMN-4321",
+    placaBuscada
+  ];
+
+  let indice: number = 0;
+  let encontrada: boolean = false;
+
+  while (indice < placas.length && !encontrada) {
+    const placa: string = placas[indice];
+    indice++;
+
+    if (placa === placaBuscada) {
+      console.log(`¡Vehículo encontrado! Placa: ${placaBuscada} (posición ${indice})`);
+      encontrada = true;
+    } else {
+      console.log(`${placa} → No corresponde al vehículo buscado`);
+    }
+  }
+}
+
+buscarPlaca();

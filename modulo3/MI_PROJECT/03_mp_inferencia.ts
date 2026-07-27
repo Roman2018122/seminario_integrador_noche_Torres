@@ -1,0 +1,14 @@
+const nombreTaller = "Torres Motor";
+const costoRevision = 45.50;
+const vehiculoListo = false;
+const vehiculosEnEspera = 6;
+const nombreCliente = "Carlos Gómez";
+const servicio = "Cambio de aceite";
+const tiempoEstimado = 2;
+
+console.log(
+  `${nombreTaller}, revisión: $${costoRevision}, vehículo listo: ${vehiculoListo}, vehículos en espera: ${vehiculosEnEspera}`
+);
+console.log(
+  `Cliente: ${nombreCliente}, Servicio: ${servicio}, Tiempo estimado: ${tiempoEstimado} horas`
+);
